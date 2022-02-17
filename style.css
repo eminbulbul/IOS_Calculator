@@ -51,22 +51,24 @@
     cursor: pointer;
 }
 
-.button17{
+.button0{
     grid-column: 1/3;
     width: 11rem;
     border-radius: 5rem;
     justify-content: flex-start;
     padding-left: 2rem;
+    background-color: #333333;
+    color: white;
 }
-.button4,.button8,.button12,.button16,.button19{
+.divide,.multiply,.minus,.add,.equal{
     background-color: #FE9505;
     color: white;
 }
-.button1,.button2,.button3{
+.AC,.change,.modulus{
     background-color:#A5A5A5;
 }
 
-.button5,.button6,.button7,.button9,.button10,.button11,.button13,.button14,.button15,.button17,.button18{
+.button7,.button8,.button9,.button4,.button5,.button6,.button1,.button2,.button3,.button17,.comma{
     background-color: #333333;
     color: white;
 }
