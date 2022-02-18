@@ -26,7 +26,7 @@ let equal = document.querySelector(".equal");
 let mind1 ;
 
 let numbers1 = [];
-let numbers2 =[];
+
 
 
 if (numbers1.length == 0) {
@@ -119,19 +119,19 @@ remove.addEventListener('click',()=>{
 
 equal.addEventListener('click',()=>{
     if ((screenOne.innerText).includes('+')) {
-        screenOne.innerText = "";
+        screenOne.innerText = `${mind1} + ${Number(numbers1.join(''))}`;
         screenSec.innerText = mind1 + Number(numbers1.join(''));
     }else if ((screenOne.innerText).includes('-')) {
-        screenOne.innerText = "";
+        screenOne.innerText = `${mind1} - ${Number(numbers1.join(''))}`;
         screenSec.innerText = mind1 - Number(numbers1.join(''));
     }else if ((screenOne.innerText).includes('×')) {
-        screenOne.innerText = "";
+        screenOne.innerText = `${mind1} × ${Number(numbers1.join(''))}`;
         screenSec.innerText = mind1 * Number(numbers1.join(''));
     }else if ((screenOne.innerText).includes('÷')) {
-        screenOne.innerText = "";
+        screenOne.innerText = `${mind1} ÷ ${Number(numbers1.join(''))}`;
         screenSec.innerText = mind1 / Number(numbers1.join(''));
     }else if ((screenOne.innerText).includes('%')) {
-        screenOne.innerText = "";
+        screenOne.innerText = `${mind1} % ${Number(numbers1.join(''))}`;
         screenSec.innerText = mind1 * Number(numbers1.join('')) / 100;
     }
 
