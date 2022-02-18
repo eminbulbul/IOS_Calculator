@@ -3,7 +3,7 @@ let screenOne = document.getElementById('screen1');
 let screenSec = document.getElementById('screen2');
 
 let ac = document.querySelector('.AC');
-let change = document.querySelector('.change');
+let remove = document.querySelector('.remove');
 let modulus = document.querySelector('.modulus');
 let divide = document.querySelector('.divide');
 let button7 = document.querySelector(".button7");
@@ -22,6 +22,8 @@ let add = document.querySelector(".add");
 let comma = document.querySelector(".comma");
 let equal = document.querySelector(".equal");
 
+
+let mind1 ;
 
 let numbers1 = [];
 let numbers2 =[];
@@ -85,3 +87,52 @@ ac.addEventListener('click',()=>{
     
 });
 
+add.addEventListener('click',()=>{
+    mind1 = Number(screenSec.innerText)
+    screenOne.innerText = `${screenSec.innerText} + `
+    numbers1 = [];
+});
+minus.addEventListener('click',()=>{
+    mind1 = Number(screenSec.innerText)
+    screenOne.innerText = `${screenSec.innerText} - `
+    numbers1 = [];
+});
+multiply.addEventListener('click',()=>{
+    mind1 = Number(screenSec.innerText)
+    screenOne.innerText = `${screenSec.innerText} × `
+    numbers1 = [];
+});
+divide.addEventListener('click',()=>{
+    mind1 = Number(screenSec.innerText)
+    screenOne.innerText = `${screenSec.innerText} ÷ `
+    numbers1 = [];
+});
+modulus.addEventListener('click',()=>{
+    mind1 = Number(screenSec.innerText)
+    screenOne.innerText = `${screenSec.innerText} % `
+    numbers1 = [];
+});
+remove.addEventListener('click',()=>{
+    numbers1.pop();
+    screenSec.innerText =Number(numbers1.join(''));
+});
+
+equal.addEventListener('click',()=>{
+    if ((screenOne.innerText).includes('+')) {
+        screenOne.innerText = "";
+        screenSec.innerText = mind1 + Number(numbers1.join(''));
+    }else if ((screenOne.innerText).includes('-')) {
+        screenOne.innerText = "";
+        screenSec.innerText = mind1 - Number(numbers1.join(''));
+    }else if ((screenOne.innerText).includes('×')) {
+        screenOne.innerText = "";
+        screenSec.innerText = mind1 * Number(numbers1.join(''));
+    }else if ((screenOne.innerText).includes('÷')) {
+        screenOne.innerText = "";
+        screenSec.innerText = mind1 / Number(numbers1.join(''));
+    }else if ((screenOne.innerText).includes('%')) {
+        screenOne.innerText = "";
+        screenSec.innerText = mind1 * Number(numbers1.join('')) / 100;
+    }
+
+});
