@@ -120,19 +120,20 @@ remove.addEventListener('click',()=>{
 equal.addEventListener('click',()=>{
     if ((screenOne.innerText).includes('+')) {
         screenOne.innerText = `${mind1} + ${Number(numbers1.join(''))}`;
-        screenSec.innerText = mind1 + Number(numbers1.join(''));
+        screenSec.innerText = (mind1 + Number(numbers1.join(''))).toFixed(4);
     }else if ((screenOne.innerText).includes('-')) {
         screenOne.innerText = `${mind1} - ${Number(numbers1.join(''))}`;
-        screenSec.innerText = mind1 - Number(numbers1.join(''));
+        screenSec.innerText = (mind1 - Number(numbers1.join('')).toFixed(4));
     }else if ((screenOne.innerText).includes('×')) {
         screenOne.innerText = `${mind1} × ${Number(numbers1.join(''))}`;
-        screenSec.innerText = mind1 * Number(numbers1.join(''));
+        screenSec.innerText = (mind1 * Number(numbers1.join('')).toFixed(4));
     }else if ((screenOne.innerText).includes('÷')) {
         screenOne.innerText = `${mind1} ÷ ${Number(numbers1.join(''))}`;
-        screenSec.innerText = mind1 / Number(numbers1.join(''));
+        screenSec.innerText = (mind1 / Number(numbers1.join(''))).toFixed(4);
+        
     }else if ((screenOne.innerText).includes('%')) {
         screenOne.innerText = `${mind1} % ${Number(numbers1.join(''))}`;
-        screenSec.innerText = mind1 * Number(numbers1.join('')) / 100;
+        screenSec.innerText = (mind1 * Number(numbers1.join('')) / 100).toFixed(4);
     }
 
 });
