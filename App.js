@@ -120,10 +120,10 @@ remove.addEventListener('click',()=>{
 equal.addEventListener('click',()=>{
     if ((screenOne.innerText).includes('+')) {
         screenOne.innerText = `${mind1} + ${Number(numbers1.join(''))}`;
-        screenSec.innerText = (mind1 + Number(numbers1.join(''))).toFixed(4);
+        screenSec.innerText = mind1 + Number(numbers1.join(''));
     }else if ((screenOne.innerText).includes('-')) {
         screenOne.innerText = `${mind1} - ${Number(numbers1.join(''))}`;
-        screenSec.innerText = (mind1 - Number(numbers1.join('')).toFixed(4));
+        screenSec.innerText = mind1 - Number(numbers1.join(''));
     }else if ((screenOne.innerText).includes('×')) {
         screenOne.innerText = `${mind1} × ${Number(numbers1.join(''))}`;
         screenSec.innerText = (mind1 * Number(numbers1.join('')).toFixed(4));
